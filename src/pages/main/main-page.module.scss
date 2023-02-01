@@ -1,0 +1,15 @@
+@import "./../../styles/mixin.scss";
+@import "./../../styles/variables.scss";
+
+.main_page{
+    @include flex(row, center, normal, nowrap);
+    flex: 1 1 auto;
+    .container{
+        @include flex(row, space-between, center, nowrap);
+        flex: 1;
+        max-width: 1110px;
+        position: relative;
+        margin: 47px 64px 64px;
+        // min-height: calc(100vh - 56px);
+    }
+}

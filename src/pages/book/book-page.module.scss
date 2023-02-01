@@ -1,0 +1,229 @@
+@import "./../../styles/mixin.scss";
+@import "./../../styles/variables.scss";
+
+section {
+    .bread_crumbs__wrapper {
+        @include text(14px, 18px, 400, $black40, .1px);
+        position: relative;
+        width: 100vw;
+        margin-bottom: 42px;
+        .bread_crumbs {
+            background-color: $black5;
+            padding: 20px 11.4vw;
+        }
+    }
+
+    .book_page {
+        &__wrapper {
+            max-width: 1110px;
+            margin: 0 auto 42px;
+        }
+
+        &__general_descr {
+            height: 658px;
+            margin-bottom: 42px;
+            display: grid;
+            grid-template-columns: minmax(136px, 445px) 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 62px 30px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "book_page_image book_page__titleBook_wrapper book_page__titleBook_wrapper"
+                "book_page_image book_page__about_book book_page__about_book";
+
+            .book_page {
+                &_image {
+                    grid-area: book_page_image;
+                }
+
+                &__titleBook_wrapper {
+                    grid-area: book_page__titleBook_wrapper;
+                    @include flex(column, space-between, normal, nowrap);
+
+                    h2 {
+                        @include text(32px, 40px, 700, $dark, .1px);
+                    }
+
+                    h3 {
+                        @include text(18px, 28px, 700, $black40, .1px);
+                    }
+
+                    button {
+                        @include text(16px, 24px, 600, $white, 0.2px);
+                        height: 52px;
+                        padding: 14px 95px;
+                        background: $btnPressedColor;
+                        max-width: 350px;
+                        border: 0px solid $white;
+                        border-radius: 50px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &__about_book {
+                    grid-area: book_page__about_book;
+
+                    h4 {
+                        @include text(18px, 28px, 700, $dark, .1px);
+                        margin-bottom: 32px;
+                    }
+
+                    p {
+                        @include text(16px, 24px, 400, $dark, .1px);
+                    }
+                }
+            }
+        }
+
+        &__raiting {
+            margin-bottom: 62px;
+            h4 {
+                @include text(18px, 28px, 700, $dark, .1px);
+                margin-bottom: 32px;
+            }
+            div {
+                @include flex(row, space-between, normal, nowrap);
+                max-width: 221px;
+
+                img:nth-of-type(2n) {
+                    margin: 0 12px;
+                }
+
+                span {
+                    @include text(18px, 28px, 700, $dark, .1px);
+                    margin-left: 24px;
+                }
+                &.book_page__raiting_line{
+                    border-bottom: 1px solid $black10;
+                    max-width: 350px !important;
+                    margin: 18px 0 16px 0;
+                }
+            }
+            
+
+        }
+
+        &__info {
+            margin-bottom: 62px;
+            h4 {
+                @include text(18px, 28px, 700, $dark, .1px);
+            }
+            div {
+                border-bottom: 1px solid $black10;
+                width: 350px;
+                margin: 16px 0;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: .85fr 1.1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "info_1 info_6 "
+                    "info_2 info_7 "
+                    "info_3 info_8 "
+                    "info_4 info_9 "
+                    "info_5 .";
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 48px;
+                    .book_page__info_list_title{
+                        @include text(16px, 24px, 600, $black40, .1px);
+                        max-width: 180px;
+                        flex: .6;
+                    }
+                    .book_page__info_list_descr{
+                        @include text(16px, 24px, 400, $dark, .1px);
+                        flex: 1;
+                    }
+                }
+                .book_page__info_1 {
+                    grid-area: info_1;
+                }
+                .book_page__info_2 {
+                    grid-area: info_2;
+                }
+                .book_page__info_3 {
+                    grid-area: info_3;
+                }
+                .book_page__info_4 {
+                    grid-area: info_4;
+                }
+                .book_page__info_5 {
+                    grid-area: info_5;
+                }
+                .book_page__info_6 {
+                    grid-area: info_6;
+                }
+                .book_page__info_7 {
+                    grid-area: info_7;
+                }
+
+                .book_page__info_8 {
+                    grid-area: info_8;
+                }
+
+                .book_page__info_9 {
+                    grid-area: info_9;
+                }
+            }
+        }
+        &__comment{
+            max-width: 730px;
+            h4{
+                @include text(18px, 28px, 700, $dark, .1px);
+                margin-bottom: 18px;
+                span{
+                    margin-left: 6px;
+                    @include text(14px, 24px, 400, $black40, .1px);
+                }
+            }
+            .book_page__comment_line{
+                border-bottom: 1px solid $black10;
+                width: 350px;
+                margin: 18px 0;
+            }
+            .book_page__comment_block{
+                @include flex(column, space-between, normal, nowrap);
+                margin-bottom: 42px;
+                
+                .book_page__comment__block_avtor{
+                    margin-bottom: 16px;
+                    @include flex(row, flex-start, center, nowrap);
+                    height: 32px;
+                    gap: 24px;
+                    img{
+                        height: 32px;
+                        width: 32px;
+                        border:none;
+                        border-radius: 100%;
+                    }
+                    span{
+                        @include text(16px, 24px, 400, $black70, .1px);
+                    }
+                }
+
+            }
+            .book_page__comment_raiting{
+                    @include flex(row, space-between, normal, nowrap);
+                    max-width: 168px;
+                    gap: 12px;
+                    margin-bottom: 16px;
+            }
+            p{
+                @include text(16px, 24px, 400, $dark, .1px);
+            }
+        }
+    }
+    .btn{
+        @include text(16px, 24px, 600, $white, 0.2px);
+        height: 52px;
+        padding: 14px 95px;
+        background: $btnPressedColor;
+        // max-width: 350px;
+        border: 0px solid $white;
+        border-radius: 50px;
+        text-transform: uppercase;
+    }
+}

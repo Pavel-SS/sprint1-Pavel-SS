@@ -1,0 +1,49 @@
+
+@import "./../../styles/mixin.scss";
+@import "./../../styles/variables.scss";
+
+.container {
+    width: auto;
+    position: relative;
+
+    &_items {
+        position: relative;
+    }
+
+    input {
+        padding: 3px 25px 3px 5px;
+        width: 100%;
+        border: solid 1.5px $black40;
+        border-radius: 5px;
+        &::placeholder{
+            color:$black40;
+        }
+    }
+    .eye {
+        position: absolute;
+        top: 51%;
+        left: calc(100% - 20px);
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+
+        &_open {
+            // background: url(#) 50% 50% no-repeat;
+        }
+        &_close {
+            // background: url(#) 50% 50% no-repeat;
+        }
+    }
+    div{
+        position: absolute;
+        top: 50%;
+        left: calc(0% + 24px);
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: url(./../../assets/svg/search_icon.svg) 50% 50% no-repeat;
+    }
+}
+   
+
+
