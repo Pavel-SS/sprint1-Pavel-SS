@@ -1,0 +1,28 @@
+@import "./../../../styles/mixin.scss";
+@import "./../../../styles/variables.scss";
+
+.footer{
+    @include flex(row, center, normal, nowrap);
+    div{
+        border-top: 1px solid $black20;
+        max-width: 1110px;
+        flex: 1;
+        @include flex(row, space-between, center, nowrap);
+        span{
+            padding: 16px 0;
+            @include text(16px, 24px, 400, $dark ,0.1px)
+        }
+        ul{
+            @include flex(row, space-between, flex-end, nowrap);
+            width: 168px;
+            li{
+                a{
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

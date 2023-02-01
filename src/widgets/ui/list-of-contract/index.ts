@@ -1,0 +1,1 @@
+import { ListOfContract } from "./list-of-contract";
