@@ -1,11 +1,11 @@
 import React from 'react'
 
-import faceboockIcon from "../../../assets/svg/facebook_icon.svg"
-import instagramIcon from "../../../assets/svg/instagram_icon.svg"
-import linkedInIcon from "../../../assets/svg/linkedIn_icon.svg"
-import vkIcon from "../../../assets/svg/vk_icon.svg"
+import faceboockIcon from '../../../assets/svg/facebook_icon.svg'
+import instagramIcon from '../../../assets/svg/instagram_icon.svg'
+import linkedInIcon from '../../../assets/svg/linkedIn_icon.svg'
+import vkIcon from '../../../assets/svg/vk_icon.svg'
 
-import media from "../../../styles/media.module.scss";
+import media from '../../../styles/media.module.scss';
 import s from './footer.module.scss';
 
 export const Footer = () => (

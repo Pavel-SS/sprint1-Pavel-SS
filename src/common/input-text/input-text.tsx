@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import React, { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent, useState } from "react";
+import React, { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent, useState } from 'react';
 
-// import style from "../../widgets/ui/panel-list-of-related-books/panel-list-of-related-books.module.scss"
-import style from "../../styles/media.module.scss"
-import fromBooks from "../../widgets/ui/panel-list-of-related-books/panel-list-of-related-books.module.scss"
+import style from '../../styles/media.module.scss'
+import fromBooks from '../../widgets/ui/panel-list-of-related-books/panel-list-of-related-books.module.scss'
 import s from "./inputText.module.scss"
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
