@@ -12,6 +12,11 @@ body {
   background-color: #ffffff;
   color: #363636;
   letter-spacing: 0.1px;
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
 }
 
 *,

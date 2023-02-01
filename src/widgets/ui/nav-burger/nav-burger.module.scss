@@ -1,0 +1,37 @@
+@import "./../../../styles/mixin.scss";
+@import "./../../../styles/variables.scss";
+section{ 
+    @include flex(row, flex-end, stretch, nowrap);
+    width: 100vw;
+    .navBurger {
+        @include flex(column, space-around, center, nowrap);
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        padding: 100px 0;
+        height: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        transform: translate(0, -100%);
+        transition: 0.7s;
+    }
+    .burgerOpen {
+        @include flex(column, space-between, flex-end, nowrap);
+        width: 35px;
+        height: 28px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        cursor: pointer;
+        >div {
+            background-color: #fff;
+            height: 4px;
+            width: 100%;
+        }
+    }
+    .isShow {
+        transform: translate(0, 0);
+        font-size: 1.6em !important;
+    }
+}

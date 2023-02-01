@@ -1,0 +1,30 @@
+@import "./media.module.scss";
+@import "./variables.scss";
+
+.inform{
+    flex: 1;
+    align-self: flex-start;
+    max-width: 825px;
+    margin: 0 auto;
+    &__title{
+        @include text(32px, 40px, 700, $dark, 0.1px ); 
+        margin-bottom: 32px;
+    }
+    &__descr{
+        width: 100%;
+        h4{
+            @include text(16px, 24px, 600, $dark, 0.1px );
+            
+        }
+        div{
+            @include text(16px, 24px, 400, $dark, 0.1px);
+            margin-left: 30px;
+            div{
+                margin-left: 30px;
+            }
+        }
+        h4, div{
+            margin-bottom: 16px;
+        }
+    }
+}

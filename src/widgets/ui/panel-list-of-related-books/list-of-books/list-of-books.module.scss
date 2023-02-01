@@ -1,0 +1,165 @@
+@import "./../../../../styles/mixin.scss";
+@import "./../../../../styles/variables.scss";
+
+.list {
+    @include flex(row, flex-start, center, wrap);
+    gap: 21.5px;
+
+    .book {
+        box-shadow: 0px 2px 4px 0px $black40;
+        @include flex(column, space-between, flex-start, nowrap);
+        width: 190px;
+        height: 470px;
+        border: 1px solid $dark30;
+        padding: 8px 8px 16px;
+        border-radius: 10px;
+
+        button {
+            @include text(12px, 18px, 600, $white, 0);
+            height: 40px;
+            background: $btnPressedColor;
+            width: 100%;
+            border: 0px solid $white;
+            border-radius: 50px;
+            text-transform: uppercase;
+            grid-area: btn;
+        }
+
+        &__image_block,
+        &__descr {
+            flex: .5;
+            @include flex(column, space-between, normal, nowrap)
+        }
+
+        &__image_block {
+            justify-content: flex-start;
+        }
+
+        &__descr {
+            flex: .4;
+        }
+
+        &__image {
+            position: relative;
+            border: 0.5px solid $dark30;
+            border-radius: 12px;
+            width: 174px;
+            height: 242px;
+            margin-bottom: 16px;
+            grid-area: book__image;
+
+            img {
+                object-fit: none;
+                position: relative;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &__raiting {
+            &_stars {
+                display: flex;
+                gap: 6px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &_none {
+                @include text(14px, 18px, 400, $black40, .1px);
+            }
+        }
+
+        &__titleBook {
+            @include text(14px, 18px, 600, $dark, .1px);
+        }
+
+        &__authorBook {
+            @include text(14px, 18px, 400, $black70, .1px);
+            span {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &_row {
+        @include flex(row, space-between, center, wrap);
+        gap: 16px;
+        li{
+            width: 100%; 
+        }
+        .book {
+            box-shadow: 0px 2px 4px 0px $black40;
+            padding: 24px 24px 24px 16px;
+            display: grid;
+            width: 100%;
+            border: 1px solid $dark30;
+            border-radius: 10px;
+            grid-template-columns: 122px 1fr 174px;
+            grid-template-rows: 1fr 0.7fr 40px;
+            gap: 8px 16px;
+            grid-template-areas:
+                "book__image book__titleBook book__titleBook"
+                "book__image book__authorBook book__authorBook"
+                "book__image book__raiting btn";
+
+        }
+
+        .book__image {
+            grid-area: book__image;
+            border: 0.5px solid $dark30;
+            border-radius: 12px;
+            height: 170px;
+            width: 100%;
+            img{
+                position: relative;
+                margin: 0 auto;
+                top:50%;
+                transform: translateY(-50%);
+                height: 100%;
+            }
+            &_noCover{
+                img{
+                    object-fit: scale-down;
+                }
+            }
+        }
+
+        .book__titleBook {
+            grid-area: book__titleBook;
+            @include text(22px, 32px, 700, $dark, .1px);
+        }
+
+        .book__authorBook {
+            grid-area: book__authorBook;
+            @include text(16px, 24px, 400, $black70, .1px);
+        }
+
+        .book__raiting {
+            grid-area: book__raiting;
+            &_stars {
+                display: flex;
+                gap: 10px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        .btn {
+            grid-area: btn;
+            @include text(12px, 18px, 600, $white, 0);
+            height: 40px;
+            background: $btnPressedColor;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+    }
+}

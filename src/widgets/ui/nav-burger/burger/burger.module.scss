@@ -1,0 +1,12 @@
+.burger__open {
+    top: 42%;
+    
+    position: absolute;
+    transition: 0.7s;
+    &:nth-child(n) {
+        transform: rotate(45deg);
+    }
+    &:nth-child(2n) {
+        transform: rotate(-45deg);
+    }
+}
